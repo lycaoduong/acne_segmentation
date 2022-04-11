@@ -1,0 +1,6 @@
+{
+    "loss_type": {"_type":"choice", "_value": [0]},
+    "lr":{"_type":"choice","_value":[0.01]},
+    "model":{"_type":"choice","_value":["u2net"]},
+    "optimizer":{"_type":"choice","_value":["sgd"]}
+}

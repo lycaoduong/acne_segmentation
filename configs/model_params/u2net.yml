@@ -1,0 +1,17 @@
+projectname : 'u2net'
+
+mean : [0.19000791667622688, 0.19000791667622688, 0.19000791667622688]
+std : [0.1407216829969945, 0.1407216829969945, 0.1407216829969945]
+
+num_gpus : 1
+img_size : 256
+
+hyperparams :
+    optimizer : 'sam'
+    num_epochs : 300 #630
+    num_workers : 4
+    batch_size : 2
+
+u2netparams :
+    num_classes: 3
+    channels: 3

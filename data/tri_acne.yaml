@@ -1,0 +1,6 @@
+root_dir: 'E:/dataset/ance/'
+# number of classes
+nc: 3
+
+# class names
+names: {0: "BG", 1: "Ance1", 2: "Ance2", 3: "Ance3"}

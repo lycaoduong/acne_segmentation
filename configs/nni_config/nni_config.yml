@@ -1,0 +1,17 @@
+authorName: lcd
+experimentName: tri_segmentation
+trialConcurrency: 1
+maxExecDuration: 99999d
+maxTrialNum: 5
+trainingServicePlatform: local
+searchSpacePath: D:\dl_workspace\segment_torch\configs\nni_search_space\tri_segment.json
+logDir: E:\log_dir\nni_log\tri_segment
+useAnnotation: false
+localConfig:
+  useActiveGpu: true
+tuner:
+  builtinTunerName: GridSearch
+trial:
+  codeDir: D:\dl_workspace\segment_torch
+  command: python main.py --request-from-nni
+  gpuNum: 1
