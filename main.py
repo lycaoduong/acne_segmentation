@@ -4,15 +4,15 @@ from utils.utils import Dict2Class
 from train import train_model
 
 def get_args():
-    parser = argparse.ArgumentParser('Carotid B-type Segmentation')
+    parser = argparse.ArgumentParser('Pytorch multi backbone segmentation source')
     parser.add_argument('-p', '--dataset', type=str, default='tri_acne', help='Select dataset')
     parser.add_argument('-m', '--model', type=str, default='u2net', help='Choosing model for training')
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
 
     parser.add_argument('-lt', '--loss_type', type=int, default=0, help='Choosing loss function')
     parser.add_argument('-size', '--input_size', type=int, default=512, help='Input size')
-    parser.add_argument('-lr', '--lr', type=float, default=0.01, help='Learning rate')
-    parser.add_argument('-ep', '--epochs', type=int, default=50, help='Select epochs')
+    parser.add_argument('-lr', '--lr', type=float, default=0.001, help='Learning rate')
+    parser.add_argument('-ep', '--epochs', type=int, default=300, help='Select epochs')
     parser.add_argument('-ot', '--optimizer', type=str, default='sgd', help='Select Optimizer')
 
     args = parser.parse_args()
@@ -20,7 +20,7 @@ def get_args():
 
 def dic_opt():
     parse_dic = {
-        'project': 'b_segmentation',
+        'project': 'pytorch_segmentation',
         'dataset': 'tri_acne',
         'device': '',
         'epochs': 300
